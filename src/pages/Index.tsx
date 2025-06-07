@@ -8,7 +8,7 @@ import { NewsTimeline } from '@/components/NewsTimeline';
 import { TrendingStocks } from '@/components/TrendingStocks';
 
 const Index = () => {
-  const [selectedStock, setSelectedStock] = useState<string>('AAPL');
+  const [selectedStock, setSelectedStock] = useState<string>('RELIANCE');
 
   return (
     <div className="min-h-screen">
@@ -22,8 +22,8 @@ const Index = () => {
               <span className="gradient-text">StockMind</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI-powered stock analysis with real-time sentiment tracking. 
-              Ask questions, get insights, make informed decisions.
+              AI-powered Indian stock analysis with real-time sentiment tracking. 
+              Ask questions about NSE/BSE stocks, get insights, make informed decisions.
             </p>
           </div>
           

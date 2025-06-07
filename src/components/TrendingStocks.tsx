@@ -20,11 +20,11 @@ interface TrendingStocksProps {
 
 export const TrendingStocks = ({ onStockSelect }: TrendingStocksProps) => {
   const trendingStocks: TrendingStock[] = [
-    { symbol: 'NVDA', name: 'NVIDIA', price: 721.33, change: 12.45, changePercent: 1.76, sentiment: 'bullish', mentions: 2450 },
-    { symbol: 'TSLA', name: 'Tesla', price: 248.73, change: -3.21, changePercent: -1.27, sentiment: 'bearish', mentions: 1890 },
-    { symbol: 'GME', name: 'GameStop', price: 18.45, change: 2.34, changePercent: 14.56, sentiment: 'bullish', mentions: 1650 },
-    { symbol: 'AMC', name: 'AMC Entertainment', price: 4.12, change: 0.23, changePercent: 5.91, sentiment: 'neutral', mentions: 980 },
-    { symbol: 'PLTR', name: 'Palantir', price: 17.89, change: 1.45, changePercent: 8.83, sentiment: 'bullish', mentions: 750 }
+    { symbol: 'ADANIENT', name: 'Adani Enterprises', price: 2834.50, change: 145.20, changePercent: 5.40, sentiment: 'bullish', mentions: 3240 },
+    { symbol: 'TATAMOTORS', name: 'Tata Motors', price: 634.75, change: -23.45, changePercent: -3.56, sentiment: 'bearish', mentions: 2890 },
+    { symbol: 'BAJFINANCE', name: 'Bajaj Finance', price: 6745.30, change: 234.80, changePercent: 3.61, sentiment: 'bullish', mentions: 2150 },
+    { symbol: 'LT', name: 'Larsen & Toubro', price: 2456.90, change: 45.60, changePercent: 1.89, sentiment: 'neutral', mentions: 1680 },
+    { symbol: 'BHARTIARTL', name: 'Bharti Airtel', price: 845.25, change: 67.40, changePercent: 8.67, sentiment: 'bullish', mentions: 1420 }
   ];
 
   const getSentimentColor = (sentiment: string) => {
@@ -42,7 +42,7 @@ export const TrendingStocks = ({ onStockSelect }: TrendingStocksProps) => {
           <TrendingUp className="h-5 w-5 text-white" />
         </div>
         <div>
-          <h3 className="font-semibold text-white">Trending Stocks</h3>
+          <h3 className="font-semibold text-white">Trending Indian Stocks</h3>
           <p className="text-sm text-gray-400">Most discussed today</p>
         </div>
       </div>
@@ -71,12 +71,12 @@ export const TrendingStocks = ({ onStockSelect }: TrendingStocksProps) => {
 
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-lg font-bold text-white">${stock.price.toFixed(2)}</p>
+                <p className="text-lg font-bold text-white">₹{stock.price.toFixed(2)}</p>
                 <div className="flex items-center space-x-2">
                   <span className={`text-sm font-medium ${
                     stock.change >= 0 ? 'text-green-400' : 'text-red-400'
                   }`}>
-                    {stock.change >= 0 ? '+' : ''}{stock.change.toFixed(2)}
+                    {stock.change >= 0 ? '+' : ''}₹{stock.change.toFixed(2)}
                   </span>
                   <span className={`text-sm ${
                     stock.change >= 0 ? 'text-green-400' : 'text-red-400'

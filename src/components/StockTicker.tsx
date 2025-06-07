@@ -17,18 +17,18 @@ interface StockTickerProps {
 
 export const StockTicker = ({ onStockSelect }: StockTickerProps) => {
   const stocks: Stock[] = [
-    { symbol: 'AAPL', name: 'Apple Inc.', price: 178.85, change: 2.45, changePercent: 1.39 },
-    { symbol: 'GOOGL', name: 'Alphabet Inc.', price: 142.12, change: -1.23, changePercent: -0.86 },
-    { symbol: 'MSFT', name: 'Microsoft Corp.', price: 378.91, change: 4.67, changePercent: 1.25 },
-    { symbol: 'TSLA', name: 'Tesla Inc.', price: 248.73, change: -3.21, changePercent: -1.27 },
-    { symbol: 'AMZN', name: 'Amazon.com Inc.', price: 153.45, change: 1.89, changePercent: 1.25 },
-    { symbol: 'NVDA', name: 'NVIDIA Corp.', price: 721.33, change: 12.45, changePercent: 1.76 }
+    { symbol: 'RELIANCE', name: 'Reliance Industries', price: 2456.75, change: 34.20, changePercent: 1.41 },
+    { symbol: 'TCS', name: 'Tata Consultancy Services', price: 3678.90, change: -45.30, changePercent: -1.22 },
+    { symbol: 'HDFCBANK', name: 'HDFC Bank Limited', price: 1634.50, change: 23.15, changePercent: 1.44 },
+    { symbol: 'INFY', name: 'Infosys Limited', price: 1445.25, change: -18.75, changePercent: -1.28 },
+    { symbol: 'ICICIBANK', name: 'ICICI Bank Limited', price: 945.80, change: 12.65, changePercent: 1.36 },
+    { symbol: 'HINDUNILVR', name: 'Hindustan Unilever', price: 2387.40, change: 28.90, changePercent: 1.23 }
   ];
 
   return (
     <Card className="stock-card">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="font-semibold text-white">Market Overview</h3>
+        <h3 className="font-semibold text-white">NSE Market Overview</h3>
         <span className="text-sm text-gray-400">Real-time prices</span>
       </div>
       
@@ -54,12 +54,12 @@ export const StockTicker = ({ onStockSelect }: StockTickerProps) => {
             </div>
             
             <div className="space-y-1">
-              <p className="text-lg font-bold text-white">${stock.price.toFixed(2)}</p>
+              <p className="text-lg font-bold text-white">₹{stock.price.toFixed(2)}</p>
               <div className="flex items-center space-x-2">
                 <span className={`text-sm font-medium ${
                   stock.change >= 0 ? 'text-green-400' : 'text-red-400'
                 }`}>
-                  {stock.change >= 0 ? '+' : ''}{stock.change.toFixed(2)}
+                  {stock.change >= 0 ? '+' : ''}₹{stock.change.toFixed(2)}
                 </span>
                 <span className={`text-sm ${
                   stock.change >= 0 ? 'text-green-400' : 'text-red-400'
